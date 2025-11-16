@@ -25,8 +25,8 @@ crawler:
 
 # 推送模式选择
 report:
-  mode: "daily" # 可选: "daily"|"incremental"|"current"
-  rank_threshold: 5 # 排名高亮阈值
+  mode: "current" # 可选: "daily"|"incremental"|"current"
+  rank_threshold: 10 # 排名高亮阈值
 
 notification:
   enable_notification: true # 是否启用通知功能，如果 false，则不发送手机通知
@@ -71,9 +71,9 @@ notification:
 
 # 用于让关注度更高的新闻在更前面显示，即用算法重新组合不同平台的热搜排序形成你侧重的热搜，合起来是 1 就行
 weight:
-  rank_weight: 0.6 # 排名权重
+  rank_weight: 0.3 # 排名权重
   frequency_weight: 0.3 # 频次权重
-  hotness_weight: 0.1 # 热度权重
+  hotness_weight: 0.4 # 热度权重
 
 # name 可以定义任意名称，只具有显示作用，即使项目运行了几天后，忽然改掉 name 也不会影响代码的正常运行
 platforms:
@@ -99,3 +99,13 @@ platforms:
     name: "抖音"
   - id: "zhihu"
     name: "知乎"
+  - id: "CCTV"
+    name: "CCTV"
+  - id: "CCTV1"
+    name: "央视"
+  - id: "taimeiti"
+    name: "钛媒体"
+  - id: "nanfangdushi"
+    name: "南方都市报"
+  - id: "xinhuashe"
+    name: "新华社"
